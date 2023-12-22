@@ -16,7 +16,7 @@
   --primary-color-text:#030712;
   --surface-0: #111827;
   --surface-50: #1f2937;
-  --surface-100: #374151;
+  --surface-100: var(--surface-card);
   --surface-200: #4b5563;
   --surface-300: #6b7280;
   --surface-400: #9ca3af;
@@ -32,7 +32,7 @@
   --gray-400: #9ca3af;
   --gray-500: #6b7280;
   --gray-600: #4b5563;
-  --gray-700: #374151;
+  --gray-700: var(--surface-card);
   --gray-800: #1f2937;
   --gray-900: #111827;
   --content-padding:1.25rem;
@@ -439,7 +439,7 @@
     margin: 0;
     padding: 0.75rem 1.25rem;
     color: rgba(255, 255, 255, 0.87);
-    background: #374151;
+    background: var(--surface-card);
     font-weight: 700;
   }
 
@@ -967,7 +967,7 @@
     margin: 0;
     padding: 0.75rem 1.25rem;
     color: rgba(255, 255, 255, 0.87);
-    background: #374151;
+    background: var(--surface-card);
     font-weight: 700;
   }
   .p-dropdown-panel .p-dropdown-items .p-dropdown-empty-message {
@@ -1256,7 +1256,7 @@
     margin: 0;
     padding: 0.75rem 1.25rem;
     color: rgba(255, 255, 255, 0.87);
-    background: #374151;
+    background: var(--surface-card);
     font-weight: 700;
   }
   .p-listbox .p-listbox-list .p-listbox-empty-message {
@@ -1437,7 +1437,7 @@
     margin: 0;
     padding: 0.75rem 1.25rem;
     color: rgba(255, 255, 255, 0.87);
-    background: #374151;
+    background: var(--surface-card);
     font-weight: 700;
   }
   .p-multiselect-panel .p-multiselect-items .p-multiselect-empty-message {
@@ -4274,7 +4274,7 @@
   }
 
   .p-breadcrumb {
-    background: #374151;
+    background: var(--surface-card);
     border: 1px solid #424b57;
     border-radius: 6px;
     padding: 1rem;
@@ -4307,7 +4307,7 @@
 
   .p-contextmenu {
     padding: 0.25rem 0;
-    background: #374151;
+    background: var(--surface-card);
     color: rgba(255, 255, 255, 0.87);
     border: 1px solid #424b57;
     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
@@ -4350,7 +4350,7 @@
   }
   .p-contextmenu .p-submenu-list {
     padding: 0.25rem 0;
-    background: #374151;
+    background: var(--surface-card);
     border: 1px solid #424b57;
     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
     border-radius: 6px;
@@ -4455,7 +4455,7 @@
   }
   .p-megamenu {
     padding: 0.5rem;
-    background: #374151;
+    background: var(--surface-card);
     color: rgba(255, 255, 255, 0.87);
     border: 1px solid #424b57;
     border-radius: 6px;
@@ -4549,7 +4549,7 @@
     box-shadow: inset 0 0 0 0.15rem rgba(96, 165, 250, 0.2);
   }
   .p-megamenu .p-megamenu-panel {
-    background: #374151;
+    background: var(--surface-card);
     color: rgba(255, 255, 255, 0.87);
     border: 1px solid #424b57;
     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
@@ -4558,7 +4558,7 @@
     margin: 0;
     padding: 0.75rem 1.25rem;
     color: rgba(255, 255, 255, 0.87);
-    background: #374151;
+    background: var(--surface-card);
     font-weight: 700;
     border-top-right-radius: 6px;
     border-top-left-radius: 6px;
@@ -4605,7 +4605,7 @@
   }
   .p-megamenu.p-megamenu-mobile-active .p-megamenu-root-list {
     padding: 0.25rem 0;
-    background: #374151;
+    background: var(--surface-card);
     border: 1px solid #424b57;
     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
   }
@@ -4684,7 +4684,7 @@
 
   .p-menu {
     padding: 0.25rem 0;
-    background: #374151;
+    background: var(--surface-card);
     color: rgba(255, 255, 255, 0.87);
     border: 1px solid #424b57;
     border-radius: 6px;
@@ -4725,7 +4725,7 @@
     box-shadow: inset 0 0 0 0.15rem rgba(96, 165, 250, 0.2);
   }
   .p-menu.p-menu-overlay {
-    background: #374151;
+    background: var(--surface-card);
     border: 1px solid #424b57;
     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
   }
@@ -4733,7 +4733,7 @@
     margin: 0;
     padding: 0.75rem 1.25rem;
     color: rgba(255, 255, 255, 0.87);
-    background: #374151;
+    background: var(--surface-card);
     font-weight: 700;
     border-top-right-radius: 0;
     border-top-left-radius: 0;
@@ -4745,7 +4745,7 @@
 
   .p-menubar {
     padding: 0.5rem;
-    background: #374151;
+    background: var(--surface-card);
     color: rgba(255, 255, 255, 0.87);
     border: 1px solid #424b57;
     border-radius: 6px;
@@ -4837,7 +4837,7 @@
   }
   .p-menubar .p-submenu-list {
     padding: 0.25rem 0;
-    background: #374151;
+    background: var(--surface-card);
     border: 1px solid #424b57;
     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
     width: 12.5rem;
@@ -4888,7 +4888,7 @@
       position: absolute;
       display: none;
       padding: 0.25rem 0;
-      background: #374151;
+      background: var(--surface-card);
       border: 1px solid #424b57;
       box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
       width: 100%;
@@ -5086,7 +5086,7 @@
 
   .p-slidemenu {
     padding: 0.25rem 0;
-    background: #374151;
+    background: var(--surface-card);
     color: rgba(255, 255, 255, 0.87);
     border: 1px solid #424b57;
     border-radius: 6px;
@@ -5127,13 +5127,13 @@
     box-shadow: inset 0 0 0 0.15rem rgba(96, 165, 250, 0.2);
   }
   .p-slidemenu.p-slidemenu-overlay {
-    background: #374151;
+    background: var(--surface-card);
     border: 1px solid #424b57;
     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
   }
   .p-slidemenu .p-slidemenu-list {
     padding: 0.25rem 0;
-    background: #374151;
+    background: var(--surface-card);
     border: 1px solid #424b57;
     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
   }
@@ -5250,7 +5250,7 @@
 
   .p-tieredmenu {
     padding: 0.25rem 0;
-    background: #374151;
+    background: var(--surface-card);
     color: rgba(255, 255, 255, 0.87);
     border: 1px solid #424b57;
     border-radius: 6px;
@@ -5291,13 +5291,13 @@
     box-shadow: inset 0 0 0 0.15rem rgba(96, 165, 250, 0.2);
   }
   .p-tieredmenu.p-tieredmenu-overlay {
-    background: #374151;
+    background: var(--surface-card);
     border: 1px solid #424b57;
     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
   }
   .p-tieredmenu .p-submenu-list {
     padding: 0.25rem 0;
-    background: #374151;
+    background: var(--surface-card);
     border: 1px solid #424b57;
     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
   }

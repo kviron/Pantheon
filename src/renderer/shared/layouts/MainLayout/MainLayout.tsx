@@ -18,10 +18,12 @@ export const MainLayout = memo((props: MainLayoutProps) => {
           Pantheon
         </Typography>
       </div>
-      <div className={cls.header}>{header}</div>
-      <div className={cls.MainLayout}>
-        <div className={cls.sidebar}>{sidebar}</div>
-        <div className={cls.content}>{content}</div>
+      <div className={cls.container}>
+        <div className={cls.header}>{header}</div>
+        <div className={cls.MainLayout}>
+          <div className={cls.sidebar}>{sidebar}</div>
+          <div className={cls.content}>{content}</div>
+        </div>
       </div>
     </>
   );

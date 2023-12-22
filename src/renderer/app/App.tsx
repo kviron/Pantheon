@@ -1,16 +1,11 @@
 import { AppRouter } from '@/app/providers/Router';
-import {
-  getRouteForbidden,
-  getRouteMain,
-  getRouteSettings,
-} from '@/shared/const/router';
 import { MainLayout } from '@/shared/layouts/MainLayout';
 import { Header } from '@/widgets/Header';
+import { Sidebar } from '@/widgets/Sidebar/ui/Sidebar/Sidebar';
 import { Suspense } from 'react';
-import './styles/themes/lara-dark-blue/theme.scss';
 import 'primeicons/primeicons.css';
+import 'primereact/resources/themes/lara-light-cyan/theme.css';
 import './App.scss';
-import { Link } from 'react-router-dom';
 
 export default function App() {
   return (
@@ -18,13 +13,7 @@ export default function App() {
       <MainLayout
         header={<Header />}
         content={<AppRouter />}
-        sidebar={
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <Link to={getRouteMain()}>Главная</Link>
-            <Link to={getRouteSettings()}>Настройки</Link>
-            <Link to={getRouteForbidden()}>недоступен</Link>
-          </div>
-        }
+        sidebar={<Sidebar />}
       />
     </Suspense>
   );

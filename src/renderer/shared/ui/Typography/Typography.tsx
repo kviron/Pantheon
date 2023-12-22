@@ -6,7 +6,7 @@ export interface TypographyProps {
   className?: string;
   children?: any;
   as?: ElementType;
-  variant?: 'body1' | 'body2' | 'h1' | 'h2' | 'h3';
+  variant?: 'body1' | 'body2' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
   fontWeight?: number | string;
 }
 
