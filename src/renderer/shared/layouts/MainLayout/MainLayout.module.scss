@@ -1,9 +1,13 @@
 .MainLayout {
-  display: grid;
+  display: grid!important;
   grid-template-areas:
-  'sidebar content content';
-  grid-template-columns: min-content 1fr 100px;
-  height: 80vh;
+  'sidebar header'
+  'sidebar content';
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: var(--header-height) 1fr;
+  gap: 32px;
+  height: 100%;
+  margin-top: var(--frame-height);
 }
 
 .frame {
@@ -13,10 +17,7 @@
   left: 0;
   right: 0;
   height: var(--frame-height);
-  z-index: 100;
-
-  display: flex;
-  align-items: center;
+  z-index: 99999;
 
   padding: 0 var(--content-padding);
 
@@ -32,7 +33,6 @@
 
 .header {
   grid-area: header;
-  margin-top: var(--frame-height);
 }
 
 .content {
@@ -42,9 +42,8 @@
 }
 
 .sidebar {
-  position: sticky;
-  top: 0;
   height: calc( 100vh - var(--frame-height) - var(--header-height));
+  grid-area: sidebar;
 }
 
 .toolbar {

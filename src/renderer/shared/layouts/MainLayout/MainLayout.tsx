@@ -1,26 +1,25 @@
-import { Typography } from '@/shared/ui/Typography';
+import classNames from 'classnames';
 import { memo, ReactElement } from 'react';
 import cls from './MainLayout.module.scss';
 
 interface MainLayoutProps {
+  frame: ReactElement;
   header: ReactElement;
   content: ReactElement;
   sidebar: ReactElement;
 }
 
 export const MainLayout = memo((props: MainLayoutProps) => {
-  const { content, header, sidebar } = props;
+  const { content, header, sidebar, frame } = props;
 
   return (
     <>
       <div className={cls.frame} id="frame">
-        <Typography as="div" fontWeight={800} variant="body2">
-          Pantheon
-        </Typography>
+        {frame}
       </div>
-      <div className={cls.container}>
-        <div className={cls.header}>{header}</div>
-        <div className={cls.MainLayout}>
+      <div>
+        <div className={classNames(cls.MainLayout, cls.container)}>
+          <div className={cls.header}>{header}</div>
           <div className={cls.sidebar}>{sidebar}</div>
           <div className={cls.content}>{content}</div>
         </div>

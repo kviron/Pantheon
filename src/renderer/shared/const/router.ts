@@ -4,14 +4,16 @@ export enum AppRoutes {
   PROFILE = 'profile',
   FORBIDDEN = 'forbidden',
   GAMES = 'games',
+  MODS = 'mods',
   DOWNLOADS = 'downloads',
   // last
   NOT_FOUND = 'not_found',
 }
 
 export const getRouteMain = () => '/';
-export const getRouteSettings = () => '/settings';
-export const getRouteProfile = (id: string) => `/profile/${id}`;
-export const getRouteForbidden = () => '/forbidden';
-export const getRouteGames = () => '/games';
-export const getRouteDownloads = () => '/downloads';
+export const getRouteSettings = () => `/${AppRoutes.SETTINGS}`;
+export const getRouteMods = () => `/${AppRoutes.MODS}`;
+export const getRouteProfile = (id: string) => `/${AppRoutes.PROFILE}/${id}`;
+export const getRouteForbidden = () => `/${AppRoutes.FORBIDDEN}`;
+export const getRouteGames = () => `/${AppRoutes.GAMES}`;
+export const getRouteDownloads = () => `/${AppRoutes.DOWNLOADS}`;

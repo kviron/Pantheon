@@ -1,4 +1,4 @@
-import { Typography } from '@/shared/ui/Typography';
+import { Title } from '@mantine/core';
 import { useTranslation } from 'react-i18next';
 
 const MainPage = () => {
@@ -6,7 +6,7 @@ const MainPage = () => {
 
   return (
     <div data-testid="MainPage">
-      <Typography variant="h1">{t('Главная страница')}</Typography>
+      <Title>{t('Главная страница')}</Title>
     </div>
   );
 };

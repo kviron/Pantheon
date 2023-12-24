@@ -18,6 +18,7 @@ module.exports = {
     'react/require-default-props': 'off',
     'no-underscore-dangle': 'off',
     'no-param-reassign': 'off',
+    'react/jsx-props-no-spreading': 'off',
     'no-undef': 'off',
   },
   parserOptions: {

@@ -1,7 +1,6 @@
 /**
  * Base webpack config used across other specific configs
  */
-
 import webpack from 'webpack';
 import TsconfigPathsPlugins from 'tsconfig-paths-webpack-plugin';
 import webpackPaths from './webpack.paths';
@@ -14,6 +13,16 @@ const configuration: webpack.Configuration = {
 
   module: {
     rules: [
+      // {
+      //   test: /\.(?:js|mjs|cjs)$/,
+      //   exclude: /node_modules/,
+      //   use: {
+      //     loader: 'babel-loader',
+      //     options: {
+      //       presets: [['@babel/preset-env', { targets: 'defaults' }]],
+      //     },
+      //   },
+      // },
       {
         test: /\.[jt]sx?$/,
         exclude: /node_modules/,

@@ -1,10 +1,10 @@
-import { DarkModeHandler, ElectronHandler } from '../main/preload';
+import { ThemeModeHandler, ElectronHandler } from '../main/preload';
 
 declare global {
   // eslint-disable-next-line no-unused-vars
   interface Window {
     electron: ElectronHandler;
-    darkMode: DarkModeHandler;
+    themeMode: ThemeModeHandler;
   }
 }
 

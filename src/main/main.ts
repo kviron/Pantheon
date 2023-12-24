@@ -14,6 +14,7 @@ import { autoUpdater } from 'electron-updater';
 import log from 'electron-log';
 import MenuBuilder from './menu';
 import { resolveHtmlPath } from './util';
+import { installExtensions } from './utils/installExtensions';
 
 class AppUpdater {
   constructor() {
@@ -31,7 +32,7 @@ ipcMain.on('ipc-example', async (event, arg) => {
   event.reply('ipc-example', msgTemplate('pong'));
 });
 
-ipcMain.handle('dark-mode:toggle', () => {
+ipcMain.handle('theme-mode:toggle', () => {
   if (nativeTheme.shouldUseDarkColors) {
     nativeTheme.themeSource = 'light';
   } else {
@@ -40,8 +41,16 @@ ipcMain.handle('dark-mode:toggle', () => {
   return nativeTheme.shouldUseDarkColors;
 });
 
-ipcMain.handle('dark-mode:system', () => {
+ipcMain.handle('theme-mode:system', () => {
   nativeTheme.themeSource = 'system';
+});
+
+ipcMain.handle('theme-mode:set', (event, theme) => {
+  if (theme === 'auto') {
+    nativeTheme.themeSource = 'system';
+  } else {
+    nativeTheme.themeSource = theme;
+  }
 });
 
 if (process.env.NODE_ENV === 'production') {
@@ -55,19 +64,6 @@ const isDebug =
 if (isDebug) {
   require('electron-debug')();
 }
-
-const installExtensions = async () => {
-  const installer = require('electron-devtools-installer');
-  const forceDownload = !!process.env.UPGRADE_EXTENSIONS;
-  const extensions = ['REACT_DEVELOPER_TOOLS'];
-
-  return installer
-    .default(
-      extensions.map((name) => installer[name]),
-      forceDownload,
-    )
-    .catch(console.log);
-};
 
 const createWindow = async () => {
   if (isDebug) {
@@ -91,7 +87,7 @@ const createWindow = async () => {
     titleBarOverlay: {
       color: 'rgba(0,0,0,0)',
       symbolColor: '#fff',
-      height: 30,
+      height: 40,
     },
     icon: getAssetPath('icon.png'),
     webPreferences: {

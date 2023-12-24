@@ -1,17 +1,18 @@
+import { ThemeProvider } from '@/app/providers/ThemeProvider/ui/ThemeProvider';
 import { createRoot } from 'react-dom/client';
 import { MemoryRouter } from 'react-router-dom';
 import { StoreProvider } from '@/app/providers/StoreProvider';
 import App from './app/App';
-import { PrimeReactProvider } from './app/providers/PrimeReactProvider';
 
 const container = document.getElementById('root') as HTMLElement;
 const root = createRoot(container);
+
 root.render(
   <StoreProvider>
     <MemoryRouter>
-      <PrimeReactProvider>
+      <ThemeProvider>
         <App />
-      </PrimeReactProvider>
+      </ThemeProvider>
     </MemoryRouter>
   </StoreProvider>,
 );

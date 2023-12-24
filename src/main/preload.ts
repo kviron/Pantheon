@@ -1,4 +1,6 @@
 // Disable no-unused-vars, broken for spread args
+import { ETheme } from '@/shared/const/theme';
+import { MantineColorScheme } from '@mantine/core/lib/core/MantineProvider/theme.types';
 /* eslint no-unused-vars: off */
 import { contextBridge, ipcRenderer, IpcRendererEvent } from 'electron';
 
@@ -24,13 +26,15 @@ const electronHandler = {
   },
 };
 
-const darkModeHandler = {
-  toggle: () => ipcRenderer.invoke('dark-mode:toggle'),
-  system: () => ipcRenderer.invoke('dark-mode:system'),
+const themeModeHandler = {
+  setTheme: (theme: MantineColorScheme) =>
+    ipcRenderer.invoke('theme-mode:set', theme),
+  toggle: () => ipcRenderer.invoke('theme-mode:toggle'),
+  system: () => ipcRenderer.invoke('theme-mode:system'),
 };
 
 contextBridge.exposeInMainWorld('electron', electronHandler);
-contextBridge.exposeInMainWorld('darkMode', darkModeHandler);
+contextBridge.exposeInMainWorld('themeMode', themeModeHandler);
 
 export type ElectronHandler = typeof electronHandler;
-export type DarkModeHandler = typeof darkModeHandler;
+export type ThemeModeHandler = typeof themeModeHandler;

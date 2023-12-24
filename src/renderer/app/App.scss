@@ -1,5 +1,5 @@
 :root {
-  --frame-height: 30px;
+  --frame-height: 40px;
 
   --header-height: 60px;
 
@@ -9,13 +9,12 @@
   --font-size-h4: 1.728rem;
   --font-size-h5: 1.44rem;
   --font-size-h6: 1.2rem;
+
 }
 
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--surface-ground);
-  color: var(--text-color);
   overflow: hidden;
 }
 
