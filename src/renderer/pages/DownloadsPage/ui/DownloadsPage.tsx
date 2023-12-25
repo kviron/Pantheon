@@ -7,5 +7,5 @@ export interface DownloadsPageProps {}
 export const DownloadsPage: FC<DownloadsPageProps> = () => {
   const { t } = useTranslation();
 
-  return <Title>{t('Страница загрузок')}</Title>;
+  return <Title>{t('Загрузки')}</Title>;
 };

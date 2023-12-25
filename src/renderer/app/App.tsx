@@ -1,5 +1,5 @@
 import { AppRouter } from '@/app/providers/Router';
-import { Frame } from '@/shared/layouts/Frame';
+import { Frame } from '@/widgets/Frame';
 import { MainLayout } from '@/shared/layouts/MainLayout';
 import { Header } from '@/widgets/Header';
 import { Sidebar } from '@/widgets/Sidebar/ui/Sidebar/Sidebar';

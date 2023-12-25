@@ -6,5 +6,5 @@ export interface ModsPageProps {}
 
 export const ModsPage: FC<ModsPageProps> = () => {
   const { t } = useTranslation();
-  return <Title>{t('Страница модов')}</Title>;
+  return <Title>{t('Моды')}</Title>;
 };

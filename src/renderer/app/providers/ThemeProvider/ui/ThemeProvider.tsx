@@ -1,5 +1,6 @@
 import { LOCAL_STORAGE_COLOR_SCHEME } from '@/shared/const/localstorage';
 import { ThemeContext } from '@/shared/lib/context/ThemeContext';
+import { themeDefault } from '@/shared/lib/theme';
 import { themeColors } from '@/shared/lib/theme/colors';
 import {
   MantineColorScheme,
@@ -22,7 +23,9 @@ export const ThemeProvider: FC<ThemeProviderProps> = (props) => {
   const { initialTheme, defaultColorScheme, children } = props;
 
   const [isThemeInited, setThemeInited] = useState(false);
-  const [theme, setTheme] = useState<MantineThemeOverride>(initialTheme || {});
+  const [theme, setTheme] = useState<MantineThemeOverride>(
+    initialTheme || themeDefault,
+  );
   const [colorScheme, setColorScheme] = useState<MantineColorScheme>(
     defaultColorScheme || storageColorScheme || 'auto',
   );

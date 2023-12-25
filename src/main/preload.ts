@@ -1,5 +1,4 @@
 // Disable no-unused-vars, broken for spread args
-import { ETheme } from '@/shared/const/theme';
 import { MantineColorScheme } from '@mantine/core/lib/core/MantineProvider/theme.types';
 /* eslint no-unused-vars: off */
 import { contextBridge, ipcRenderer, IpcRendererEvent } from 'electron';

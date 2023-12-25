@@ -1,3 +1,4 @@
+import { Container } from '@mantine/core';
 import classNames from 'classnames';
 import { memo, ReactElement } from 'react';
 import cls from './MainLayout.module.scss';
@@ -18,10 +19,18 @@ export const MainLayout = memo((props: MainLayoutProps) => {
         {frame}
       </div>
       <div>
-        <div className={classNames(cls.MainLayout, cls.container)}>
-          <div className={cls.header}>{header}</div>
+        <div className={classNames(cls.MainLayout)}>
+          <div className={cls.header}>
+            <Container px="md" fluid>
+              {header}
+            </Container>
+          </div>
           <div className={cls.sidebar}>{sidebar}</div>
-          <div className={cls.content}>{content}</div>
+          <div className={cls.content}>
+            <Container px="md" fluid>
+              {content}
+            </Container>
+          </div>
         </div>
       </div>
     </>

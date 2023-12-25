@@ -83,14 +83,11 @@ const createWindow = async () => {
     height: 800,
     minHeight: 700,
     minWidth: 1024,
-    titleBarStyle: 'hidden',
-    titleBarOverlay: {
-      color: 'rgba(0,0,0,0)',
-      symbolColor: '#fff',
-      height: 40,
-    },
+    frame: false,
     icon: getAssetPath('icon.png'),
     webPreferences: {
+      nodeIntegration: true,
+      nodeIntegrationInWorker: true,
       preload: app.isPackaged
         ? path.join(__dirname, 'preload.js')
         : path.join(__dirname, '../../.erb/dll/preload.js'),
